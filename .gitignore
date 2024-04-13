@@ -1,4 +1,5 @@
 /node_modules/
+infrastructure\.terraform\
 # This is a minimal list, OK to add things per repo
 # mac specific
 .DS_Store
