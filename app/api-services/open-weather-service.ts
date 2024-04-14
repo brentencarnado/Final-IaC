@@ -1,4 +1,4 @@
-const API_KEY = process.env.WEATHER_API_KEY
+const API_KEY = '1798a3e8291358c026546b22e999c7c1'
 const TEN_MINUTES = 1000 * 60 * 10 // in milliseconds
 
 const resultsCache: Record<string, {lastFetch: number; data: unknown}> = {}

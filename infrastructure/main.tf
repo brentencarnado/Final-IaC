@@ -1,6 +1,6 @@
 variable "prefix_name" {
   type    = string
-  default = "cst8918-a03-student"
+  default = "cst8918-a03-barb0238"
 }
 
 variable "app_path" {
@@ -40,7 +40,7 @@ provider "azurerm" {
 # Create a resource group
 resource "azurerm_resource_group" "example" {
   name     = "${var.prefix_name}-rg"
-  location = "East US"
+  location = "westus3"
 }
 
 # Create an Azure Container Registry
