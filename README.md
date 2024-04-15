@@ -37,6 +37,4 @@ Then used 'terraform apply' and It worked
 ![App](/infrastructure/pictures/2c.png)
 ![prod](/infrastructure/pictures/2d.png)
 ![test](/infrastructure/pictures/test.png)
-=======
-just testing
->>>>>>> 3a65cf5e16045c2af29162d14939ff1a9a200dcc
+
