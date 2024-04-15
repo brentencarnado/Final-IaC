@@ -25,7 +25,7 @@ resource "azurerm_kubernetes_cluster" "test_cluster" {
   }
     service_principal {
     client_id     = "354398b0-9244-4345-8260-3b7209b645a3"
-    client_secret = 
+    
   }
 }
 
@@ -46,6 +46,6 @@ resource "azurerm_kubernetes_cluster" "prod_cluster" {
   }
   service_principal {
     client_id     = "354398b0-9244-4345-8260-3b7209b645a3"
-    client_secret = 
+    
   }
 }
