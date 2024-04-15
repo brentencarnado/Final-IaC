@@ -5,6 +5,7 @@ Chowdhurysal Ferdowsy https://github.com/chowdhury611
 Cameron Barber https://github.com/barb0238
 Andrew Han https://github.com/han00116
 
+<<<<<<< HEAD
 ## Define Resources
 Created blob storage and conatienr uisng terraform
 ![Resource group](/infrastructure/pictures/1a.png)
@@ -36,3 +37,6 @@ Then used 'terraform apply' and It worked
 ![App](/infrastructure/pictures/2c.png)
 ![prod](/infrastructure/pictures/2d.png)
 ![test](/infrastructure/pictures/test.png)
+=======
+just testing
+>>>>>>> 3a65cf5e16045c2af29162d14939ff1a9a200dcc
