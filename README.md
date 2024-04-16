@@ -7,7 +7,7 @@ Andrew Han https://github.com/han00116
 
 <<<<<<< HEAD
 ## Define Resources
-Created blob storage and conatienr uisng terraform
+Created blob storage and container using Terraform
 ![Resource group](/infrastructure/pictures/1a.png)
 ![RG](/infrastructure/pictures/1b.png)
 ![RG](/infrastructure/pictures/1c.png)
@@ -26,13 +26,13 @@ Created a Terraform module for the AKS clusters
 ![code](/infrastructure/pictures/2a.png)
 
 ![App](/infrastructure/pictures/rbac.png)
-Ensured service principal specified in the Terraform configuration has the appropriate permissions. 
+Ensured the service principal specified in the Terraform configuration had the appropriate permissions. 
 
 ![code](/infrastructure/pictures/salehaapp.png)
 
 Updated Terraform configuration with the newly generated credentials.
 ![App](/infrastructure/pictures/2e.png)
-Then used 'terraform apply' and It worked
+Then, I used 'terraform apply' and It worked
 ![App](/infrastructure/pictures/2b.png)
 ![App](/infrastructure/pictures/2c.png)
 ![prod](/infrastructure/pictures/2d.png)
