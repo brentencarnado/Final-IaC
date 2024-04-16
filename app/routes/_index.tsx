@@ -36,7 +36,7 @@ export async function loader() {
 }
 
 export default function CurrentConditions() {
-  const {currentConditions} = useLoaderData<typeof loader>()
+  const currentConditions = useLoaderData<typeof loader>().currentConditions
   const weather = currentConditions.weather[0]
   return (
     <>
