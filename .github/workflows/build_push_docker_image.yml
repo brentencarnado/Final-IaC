@@ -1,0 +1,44 @@
+name: Build and Push Docker Image
+
+#will only run if the application code is changed (the files in app directory), on a pull request to main branch
+on:
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'app/**'
+      - 'Dockerfile'
+
+permissions:
+  contents: read
+  packages: write
+
+env:
+  PREFIX_NAME: cst8918-a03-barb0238
+  IMAGE_TAG: ${{ github.sha }} # set to the commit SHA
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+
+    - name: Docker/ACRLogin
+      uses: azure/docker-login@v1
+      with:
+        login-server: ${{ secrets.REGISTRY_LOGIN_SERVER }}
+        username: ${{ secrets.REGISTRY_USERNAME }}
+        password: ${{ secrets.REGISTRY_PASSWORD }}
+
+    - name: Build and Push Docker image to ACR
+      uses: docker/build-push-action@v5
+      with:
+        push: true
+        file: ./Dockerfile
+        tags: ${{ secrets.REGISTRY_LOGIN_SERVER }}/${{ env.PREFIX_NAME }}:${{ env.IMAGE_TAG }}
+        load: true
+
+    - name: Verify Docker Image
+      run: docker run --rm ${{ secrets.REGISTRY_LOGIN_SERVER }}/${{ env.PREFIX_NAME }}:${{ env.IMAGE_TAG }} /bin/sh -c "echo 'Docker image run success'"
