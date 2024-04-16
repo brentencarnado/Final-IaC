@@ -25,9 +25,10 @@ resource "azurerm_kubernetes_cluster" "test_cluster" {
   }
     service_principal {
     client_id     = "354398b0-9244-4345-8260-3b7209b645a3"
-    client_secret = "leW8Q~pUp4F33D3VkSJnBYNSuiPe4sOoiLERkc6M"
-
-    
+    client_secret = "leW8Q~pUp4F33D3VkSJnBYNSuiPe4sOoiLERkc6M" 
+  }
+    tags = {
+    Environment = "test"
   }
 }
 
@@ -50,5 +51,8 @@ resource "azurerm_kubernetes_cluster" "prod_cluster" {
     client_id     = "354398b0-9244-4345-8260-3b7209b645a3"
     client_secret = "leW8Q~pUp4F33D3VkSJnBYNSuiPe4sOoiLERkc6M"
 
+  }
+  tags = {
+    Environment = "prod"
   }
 }
