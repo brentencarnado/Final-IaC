@@ -5,7 +5,6 @@ Chowdhurysal Ferdowsy https://github.com/chowdhury611
 Cameron Barber https://github.com/barb0238
 Andrew Han https://github.com/han00116
 
-<<<<<<< HEAD
 ## Define Resources
 Created blob storage and conatienr uisng terraform
 ![Resource group](/infrastructure/pictures/1a.png)
